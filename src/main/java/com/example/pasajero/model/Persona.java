@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.data.annotation.Id;
 
 @Getter
 @Setter
@@ -13,6 +14,7 @@ import lombok.ToString;
 @ToString
 public abstract class Persona {
 
+    @Id
     private String id;
     private String nombre;
     private String apellido;

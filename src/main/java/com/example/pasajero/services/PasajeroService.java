@@ -1,51 +1,50 @@
 package com.example.pasajero.services;
 
 import com.example.pasajero.model.Pasajero;
+import com.example.pasajero.repository.PasajeroRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 @Service
+@RequiredArgsConstructor
 public class PasajeroService {
 
-    private final Map<String, Pasajero> pasajeros = new ConcurrentHashMap<>();
+    private final PasajeroRepository repository;
 
     public Pasajero crearPasajero(Pasajero pasajero) {
         if (!pasajero.validarPasajero()) {
             throw new RuntimeException("Los datos del pasajero están incompletos.");
         }
-        if (pasajeros.containsKey(pasajero.getId())) {
+        if (repository.existsById(pasajero.getId())) {
             throw new RuntimeException("Ya existe un pasajero con el ID " + pasajero.getId());
         }
-        pasajeros.put(pasajero.getId(), pasajero);
-        return pasajero;
+        return repository.save(pasajero);
     }
 
     public List<Pasajero> listarPasajeros() {
-        return new ArrayList<>(pasajeros.values());
+        return repository.findAll();
     }
 
     public Pasajero buscarPasajero(String id) {
-        return pasajeros.get(id);
+        return repository.findById(id).orElse(null);
     }
 
     public Pasajero modificarPasajero(Pasajero pasajero) {
-        if (!pasajeros.containsKey(pasajero.getId())) {
+        if (!repository.existsById(pasajero.getId())) {
             throw new RuntimeException("No se encontró un pasajero con el ID " + pasajero.getId());
         }
         if (!pasajero.validarPasajero()) {
             throw new RuntimeException("Los datos del pasajero están incompletos.");
         }
-        pasajeros.put(pasajero.getId(), pasajero);
-        return pasajero;
+        return repository.save(pasajero);
     }
 
     public void eliminarPasajero(String id) {
-        if (pasajeros.remove(id) == null) {
+        if (!repository.existsById(id)) {
             throw new RuntimeException("No se encontró un pasajero con el ID " + id);
         }
+        repository.deleteById(id);
     }
 }
