@@ -1,0 +1,241 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 490" width="100%" height="auto" role="img" aria-label="Un convertible rojo sube una carretera entre colinas">
+  <defs>
+    <linearGradient id="cielo-gradiente" x1="0" y1="0" x2="0" y2="490" gradientUnits="userSpaceOnUse"><stop stop-color="#83bec5"/><stop offset=".67" stop-color="#c4e1d9"/><stop offset="1" stop-color="#f7e9c9"/></linearGradient>
+    <radialGradient id="halo-sol"><stop stop-color="#fff4c5" stop-opacity=".88"/><stop offset="1" stop-color="#fff4c5" stop-opacity="0"/></radialGradient>
+    <radialGradient id="sol-gradiente"><stop stop-color="#ffedb0"/><stop offset="1" stop-color="#f5c967"/></radialGradient>
+    <path id="ruta" d="M400 520 C485 439 315 405 400 322 C490 232 356 230 402 214" fill="none" stroke="none"/>
+    <g id="arbol-redondo">
+      <ellipse cx="0" cy="0" rx="20" ry="5" fill="#455642" opacity=".22"/>
+      <path d="M0-5V-31" stroke="#79543c" stroke-width="5" stroke-linecap="round"/>
+      <g style="transform-box:fill-box;transform-origin:50% 100%">
+        <animateTransform attributeName="transform" type="rotate" values="-1.5;1.5;-1.5" dur="6s" repeatCount="indefinite"/>
+        <circle cx="-12" cy="-32" r="12" fill="#e58a30"/><circle cx="2" cy="-40" r="14" fill="#f0bd3e"/><circle cx="14" cy="-29" r="12" fill="#df702a"/><circle cx="-1" cy="-24" r="11" fill="#eab33d"/>
+      </g>
+    </g>
+    <g id="arbol-pino">
+      <ellipse cx="0" cy="0" rx="13" ry="4" fill="#455642" opacity=".2"/>
+      <path d="M0-4V-43" stroke="#79543c" stroke-width="4"/>
+      <g style="transform-box:fill-box;transform-origin:50% 100%">
+        <animateTransform attributeName="transform" type="rotate" values="1.5;-1.5;1.5" dur="6s" repeatCount="indefinite"/>
+        <path d="M0-50L-15-26H-7L-19-10H19L7-26H15Z" fill="#57785b"/><path d="M0-50L0-10H19L7-26H15Z" fill="#405f4c"/>
+      </g>
+    </g>
+    <g id="flor">
+      <path d="M0 0V-9" stroke="#52764c" stroke-width="1.5" stroke-linecap="round"/><circle cy="-11" r="2.4" fill="#fff3cf"/><circle cy="-11" r="1.1" fill="#efbd3c"/>
+    </g>
+    <g id="mata"><path d="M0 0Q-5-7-2-12Q2-7 1 0Q3-9 8-11Q8-4 3 1Q8-5 12-5Q10 0 3 3Z" fill="#557447"/></g>
+  </defs>
+  <style>
+    .nube-izq{animation:nube-izq 12s ease-in-out infinite alternate}
+    .nube-der{animation:nube-der 12s ease-in-out infinite alternate}
+    .colinas-lejos{animation:parallax-lejos 12s ease-in-out infinite alternate}
+    .colinas-medias{animation:parallax-medias 6s ease-in-out infinite alternate}
+    .polvo-a{animation:polvo-a 2s ease-out infinite}
+    .polvo-b{animation:polvo-b 2s ease-out infinite}
+    .rueda{transform-box:fill-box;transform-origin:center;animation:rodar 2s linear infinite}
+    .humo{animation:humo 3s ease-out infinite}
+    @keyframes nube-izq{from{transform:translateX(-8px)}to{transform:translateX(12px)}}
+    @keyframes nube-der{from{transform:translateX(10px)}to{transform:translateX(-9px)}}
+    @keyframes parallax-lejos{from{transform:translateX(-2px)}to{transform:translateX(3px)}}
+    @keyframes parallax-medias{from{transform:translateX(2px)}to{transform:translateX(-3px)}}
+    @keyframes polvo-a{0%{opacity:0;r:2}35%{opacity:.42}100%{opacity:0;r:8}}
+    @keyframes polvo-b{0%{opacity:0;r:1}40%{opacity:.32}100%{opacity:0;r:6}}
+    @keyframes rodar{to{transform:rotate(360deg)}}
+    @keyframes humo{0%{opacity:0;transform:translateY(3px)}35%{opacity:.45}100%{opacity:0;transform:translateY(-10px)}}
+  </style>
+
+  <g id="cielo"><rect width="800" height="490" fill="url(#cielo-gradiente)"/><path d="M0 0H800V36Q702 53 612 30T411 35Q280 61 155 35T0 42Z" fill="#d3eae2" opacity=".48"/></g>
+  <g id="sol-y-halo"><circle cx="589" cy="105" r="84" fill="url(#halo-sol)"/><circle cx="589" cy="105" r="33" fill="url(#sol-gradiente)"/></g>
+  <g id="nubes" fill="#f8f8ed" opacity=".88">
+    <g class="nube-izq"><path d="M94 127q2-12 16-12q7-17 25-15q16 2 18 18q15-4 20 9q2 9-9 10h-59q-14-1-11-10Z"/></g>
+    <g class="nube-der"><path d="M534 145q2-10 13-10q6-14 20-12q14 2 16 14q13-3 17 8q1 8-8 8h-49q-12-1-9-8Z"/></g>
+    <path d="M278 105q2-7 10-7q4-10 14-9q9 1 11 10q9-2 11 6q1 5-6 5h-33q-8-1-7-5Z" opacity=".65"/>
+  </g>
+  <g id="colinas-lejanas" class="colinas-lejos">
+    <path d="M0 291V210Q28 193 49 224Q72 203 94 246Q119 218 145 261Q171 239 196 284L225 312H0Z" fill="#75999a"/>
+    <path d="M800 211Q772 196 748 229Q725 210 703 251Q677 231 651 274Q628 252 601 299L572 320H800Z" fill="#749499"/>
+    <path d="M0 302Q76 254 154 280T298 286Q371 238 443 279T581 277Q691 231 800 281V391H0Z" fill="#899a70"/>
+    <path d="M0 315Q78 276 153 296T296 301Q373 257 443 296T581 295Q689 252 800 300" fill="none" stroke="#9dab79" stroke-width="12" opacity=".55"/>
+  </g>
+  <g id="colinas-medias" class="colinas-medias">
+    <path d="M0 328Q105 291 211 319T395 314Q499 278 605 309T800 298V490H0Z" fill="#a3ad6b"/>
+    <path d="M0 351Q105 317 212 339T397 335Q505 301 608 332T800 321" fill="none" stroke="#c4bd70" stroke-width="14" opacity=".48"/>
+    <path d="M0 377Q110 353 217 374T411 368Q520 337 627 365T800 354V490H0Z" fill="#bac078"/>
+  </g>
+  <g id="casas-y-arboles-lejanos">
+    <g opacity=".58"><use xlink:href="#arbol-pino" transform="translate(38 324) scale(.55)"/><use xlink:href="#arbol-pino" transform="translate(740 321) scale(.5)"/></g>
+    <g transform="translate(76 302)"><ellipse cx="28" cy="3" rx="36" ry="6" fill="#4f5842" opacity=".2"/><path d="M0 0V-38L28-59L58-38V0Z" fill="#f0cc71"/><path d="M-6-37L28-64L64-37L58-32L28-53L0-31Z" fill="#d64737"/><rect x="8" y="-28" width="11" height="12" fill="#9bc4c1"/><rect x="37" y="-28" width="11" height="12" fill="#9bc4c1"/><path d="M24 0V-23Q29-28 34-23V0" fill="#986349"/><path d="M44-45V-58H51V-34" fill="#e2bc6d"/><g class="humo" fill="#f9f5e8"><circle cx="49" cy="-64" r="3"/><circle cx="53" cy="-70" r="2.5"/></g></g>
+    <g transform="translate(682 314) scale(.78)"><ellipse cx="28" cy="3" rx="36" ry="6" fill="#4f5842" opacity=".2"/><path d="M0 0V-38L28-59L58-38V0Z" fill="#f0cc71"/><path d="M-6-37L28-64L64-37L58-32L28-53L0-31Z" fill="#d64737"/><rect x="8" y="-28" width="11" height="12" fill="#9bc4c1"/><rect x="37" y="-28" width="11" height="12" fill="#9bc4c1"/><path d="M24 0V-23Q29-28 34-23V0" fill="#986349"/></g>
+    <use xlink:href="#arbol-redondo" transform="translate(32 333) scale(.55)"/>
+    <use xlink:href="#arbol-redondo" transform="translate(756 336) scale(.58)"/>
+    <use xlink:href="#arbol-pino" transform="translate(223 341) scale(.68)"/>
+    <use xlink:href="#arbol-pino" transform="translate(572 340) scale(.7)"/>
+  </g>
+  <g id="carretera">
+  </g>
+  <g id="barandas" fill="none" stroke-linecap="round">
+  </g>
+  <g id="carro">
+    <g id="carro-bounce">
+      <g id="carro-scale">
+        <ellipse id="sombra-carro" cx="0" cy="0" rx="48" ry="10" fill="#26352d" opacity=".25"/>
+        <g id="carro-body">
+          <path d="M-40-5Q-46-13-43-31Q-42-45-32-52L-23-66Q-16-77 0-78Q16-77 23-66L32-52Q42-45 43-31Q46-13 40-5Q25 3 0 3Q-25 3-40-5Z" fill="#bd302b"/>
+          <path d="M-40-6Q-44-18-40-34Q-38-45-29-52L-21-66Q-14-76 0-77V2Q-26 2-40-6Z" fill="#e94337"/>
+          <path d="M-24-53Q-19-72 0-73Q19-72 24-53L18-37H-18Z" fill="#513e38"/>
+          <path d="M-21-53Q-17-67-7-69L-4-40H-23Z" fill="#9fc8c8"/><path d="M5-69Q17-66 21-53L23-40H4Z" fill="#b8d9d4"/>
+          <path d="M-14-45Q0-49 14-45L20-33H-20Z" fill="#9eb9b7"/>
+          <circle cx="-9" cy="-62" r="5.5" fill="#efc092"/><circle cx="9" cy="-62" r="5.5" fill="#eab789"/><path d="M-15-67q6-8 12-1M3-68q7-7 13 1" fill="none" stroke="#49352f" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M-27-50Q0-57 27-50L32-37Q0-30-32-37Z" fill="#a42b29"/>
+          <path d="M-38-35Q-31-45-24-37L-22-18Q-30-9-39-17Z" fill="#d4322e"/><path d="M38-35Q31-45 24-37L22-18Q30-9 39-17Z" fill="#bd2b29"/>
+          <ellipse cx="-32" cy="-28" rx="5" ry="7.5" fill="#f0d8a4"/><ellipse cx="32" cy="-28" rx="5" ry="7.5" fill="#f0d8a4"/><ellipse cx="-32" cy="-28" rx="2.5" ry="4.5" fill="#e76a59"/><ellipse cx="32" cy="-28" rx="2.5" ry="4.5" fill="#e76a59"/>
+          <path d="M-25-14Q0-9 25-14" fill="none" stroke="#872626" stroke-width="3" stroke-linecap="round"/><path d="M-32-6Q0 1 32-6" fill="none" stroke="#ded5c3" stroke-width="4" stroke-linecap="round"/>
+          <g transform="translate(-39 -8)"><g class="rueda"><circle r="8" fill="#292e2c"/><circle r="4.8" fill="#d7ccb4"/><path d="M-3 0H3M0-3V3" stroke="#77786e" stroke-width="1.1"/></g></g>
+          <g transform="translate(39 -8)"><g class="rueda"><circle r="8" fill="#292e2c"/><circle r="4.8" fill="#d7ccb4"/><path d="M-3 0H3M0-3V3" stroke="#77786e" stroke-width="1.1"/></g></g>
+        </g>
+        <g id="polvo" fill="#eee3c9"><circle class="polvo-a" cx="-15" cy="8" r="2"/><circle class="polvo-b" cx="12" cy="11" r="1.5"/></g>
+      </g>
+    </g>
+  </g>
+  <g id="colina-primer-plano" fill="#889966" fill-rule="evenodd">
+    <path d="M0 320Q97 336 205 307Q298 279 359 235Q389 213 400 208Q419 204 439 222Q503 273 603 307Q696 337 800 315V490H0Z M395 222C391 254 421 272 453 296C483 319 446 352 405 382C364 412 339 456 317 490L483 490C470 454 454 418 429 392C404 366 478 346 486 316C493 284 441 263 418 241Q405 231 413 222Z"/>
+    <path d="M0 321Q98 337 205 309Q300 281 360 237Q390 215 400 210" fill="none" stroke="#9eaa75" stroke-width="5" opacity=".7"/>
+  </g>
+  <g id="arboles-y-pasto-frontal">
+    <use xlink:href="#arbol-pino" transform="translate(43 351)"/><use xlink:href="#arbol-pino" transform="translate(89 360) scale(.82)"/><use xlink:href="#arbol-redondo" transform="translate(153 357)"/><use xlink:href="#arbol-redondo" transform="translate(219 362) scale(.82)"/>
+    <use xlink:href="#arbol-redondo" transform="translate(601 355) scale(.86)"/><use xlink:href="#arbol-pino" transform="translate(686 357)"/><use xlink:href="#arbol-pino" transform="translate(752 350) scale(.78)"/>
+    <use xlink:href="#mata" x="18" y="442"/><use xlink:href="#mata" x="58" y="468"/><use xlink:href="#mata" x="119" y="423"/><use xlink:href="#mata" x="183" y="464"/><use xlink:href="#mata" x="250" y="439"/><use xlink:href="#mata" x="552" y="459"/><use xlink:href="#mata" x="636" y="425"/><use xlink:href="#mata" x="704" y="471"/><use xlink:href="#mata" x="778" y="438"/>
+    <use xlink:href="#flor" x="35" y="465"/><use xlink:href="#flor" x="83" y="430"/><use xlink:href="#flor" x="143" y="478"/><use xlink:href="#flor" x="208" y="434"/><use xlink:href="#flor" x="274" y="473"/><use xlink:href="#flor" x="526" y="429"/><use xlink:href="#flor" x="590" y="475"/><use xlink:href="#flor" x="663" y="450"/><use xlink:href="#flor" x="735" y="430"/>
+  </g>
+  <script type="application/ecmascript"><![CDATA[
+    (() => {
+      const svgNS = 'http://www.w3.org/2000/svg';
+      const route = document.getElementById('ruta');
+      const road = document.getElementById('carretera');
+      const rails = document.getElementById('barandas');
+      const car = document.getElementById('carro');
+      const carScale = document.getElementById('carro-scale');
+      const length = route.getTotalLength();
+      const carWidth = 92;
+      const create = (tag, attrs) => {
+        const node = document.createElementNS(svgNS, tag);
+        for (const [key, value] of Object.entries(attrs)) node.setAttribute(key, String(value));
+        return node;
+      };
+      const pointAt = (s) => route.getPointAtLength(Math.max(0, Math.min(length, s)));
+      const frameAt = (s) => {
+        const p = pointAt(s);
+        const before = pointAt(s - 1.5);
+        const after = pointAt(s + 1.5);
+        const dx = after.x - before.x;
+        const dy = after.y - before.y;
+        const mag = Math.hypot(dx, dy) || 1;
+        const tx = dx / mag;
+        const ty = dy / mag;
+        return { x: p.x, y: p.y, tx, ty, nx: -ty, ny: tx };
+      };
+      const widthAt = (f) => Math.max(6, 6 + 84 * Math.pow(1 - f, .8) + 1.5 * Math.sin(f * 14) * (1 - f));
+      const sampleCount = Math.ceil(length / 1.8);
+      const samples = [];
+      for (let i = 0; i <= sampleCount; i++) {
+        const f = i / sampleCount;
+        samples.push({ ...frameAt(length * f), f, width: widthAt(f) });
+      }
+      const offsetPoint = (p, side, extra = 0) => {
+        const d = p.width / 2 + extra;
+        return [p.x + p.nx * d * side, p.y + p.ny * d * side];
+      };
+      const polyPoints = (side, extra) => samples.map((p) => offsetPoint(p, side, extra).map((v) => v.toFixed(2)).join(',')).join(' ');
+      const border = create('polygon', { points: `${polyPoints(-1, 3)} ${polyPoints(1, 3).split(' ').reverse().join(' ')}`, fill: '#f3e9d0', opacity: '.86' });
+      const asphalt = create('polygon', { points: `${polyPoints(-1, 0)} ${polyPoints(1, 0).split(' ').reverse().join(' ')}`, fill: '#686e63' });
+      road.append(border, asphalt);
+      const edgePaths = [-1, 1].map((side) => {
+        const d = samples.map((p, i) => {
+          const q = offsetPoint(p, side);
+          return `${i ? 'L' : 'M'}${q[0].toFixed(2)} ${q[1].toFixed(2)}`;
+        }).join(' ');
+        const path = create('path', { d, fill: 'none', stroke: '#f5ebd1', 'stroke-linecap': 'round' });
+        road.append(path);
+        return path;
+      });
+      edgePaths.forEach((path, sideIndex) => {
+        const side = sideIndex === 0 ? -1 : 1;
+        for (let i = 0; i < samples.length - 1; i++) {
+          const p = samples[i];
+          const a = offsetPoint(p, side);
+          const b = offsetPoint(samples[i + 1], side);
+          const segment = create('path', { d: `M${a[0]} ${a[1]}L${b[0]} ${b[1]}`, stroke: '#f5ebd1', 'stroke-width': Math.max(.45, 2.8 * (1 - p.f) + .35), 'stroke-opacity': .95 - .72 * p.f, 'stroke-linecap': 'round' });
+          road.append(segment);
+        }
+      });
+      const shadowPoints = samples.map((p) => [p.x - p.nx * p.width * .46, p.y - p.ny * p.width * .46]);
+      const innerShadowPoints = samples.map((p) => [p.x - p.nx * p.width * .25, p.y - p.ny * p.width * .25]);
+      const shadow = create('polygon', { points: `${shadowPoints.map((p) => p.join(',')).join(' ')} ${innerShadowPoints.reverse().map((p) => p.join(',')).join(' ')}`, fill: '#354039', opacity: '.1' });
+      road.append(shadow);
+      let dashAt = 0;
+      while (dashAt < length - 2) {
+        const f = dashAt / length;
+        const p = frameAt(dashAt);
+        const w = widthAt(f);
+        const dashLength = Math.max(.8, w * .115);
+        const a = pointAt(dashAt - dashLength / 2);
+        const b = pointAt(dashAt + dashLength / 2);
+        road.append(create('path', { d: `M${a.x} ${a.y}L${b.x} ${b.y}`, fill: 'none', stroke: '#f5efd9', 'stroke-width': Math.max(.45, w * .055), 'stroke-linecap': 'round', opacity: .9 - .48 * f }));
+        dashAt += 2.6 + 15 * (1 - f);
+      }
+      const curvatureAt = (s) => {
+        const a = frameAt(s - 4);
+        const b = frameAt(s + 4);
+        return { cross: a.tx * b.ty - a.ty * b.tx, strength: Math.abs(a.tx * b.ty - a.ty * b.tx) / 8 };
+      };
+      let railPoints = [];
+      const flushRail = () => {
+        if (railPoints.length < 2) { railPoints = []; return; }
+        const d = railPoints.map((p, i) => `${i ? 'L' : 'M'}${p.x.toFixed(2)} ${p.y.toFixed(2)}`).join(' ');
+        const railPath = create('path', { d, fill: 'none', stroke: '#eee6d0', 'stroke-width': '2.4', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' });
+        const railShadow = create('path', { d, fill: 'none', stroke: '#53695a', 'stroke-width': '5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round', opacity: '.9' });
+        rails.append(railShadow, railPath);
+        railPoints = [];
+      };
+      let railStep = 0;
+      while (railStep < length) {
+        const f = railStep / length;
+        const p = frameAt(railStep);
+        const curve = curvatureAt(railStep);
+        if (curve.strength > .0015) {
+          const side = curve.cross > 0 ? -1 : 1;
+          const d = p.width / 2 + 3.5;
+          const x = p.x + p.nx * d * side;
+          const y = p.y + p.ny * d * side;
+          railPoints.push({ x, y });
+          const postHeight = 2 + 11 * (1 - f);
+          rails.append(create('line', { x1: x, y1: y, x2: x - p.tx * .8, y2: y - postHeight, stroke: '#f0e8d2', 'stroke-width': Math.max(.55, 1.8 * (1 - f)), 'stroke-linecap': 'round' }));
+        } else flushRail();
+        railStep += 3 + 14 * (1 - f);
+      }
+      flushRail();
+      let started = 0;
+      let previousAngle = 0;
+      const animateCar = (now) => {
+        if (!started) started = now;
+        const elapsed = (now - started) % 12000;
+        const f = elapsed / 12000;
+        const s = length * f;
+        const p = frameAt(s);
+        const width = widthAt(f);
+        const laneOffset = width * .22;
+        const x = p.x + p.nx * laneOffset;
+        const y = p.y + p.ny * laneOffset;
+        const desired = Math.atan2(p.ty, p.tx) * 180 / Math.PI + 90;
+        const bounded = Math.max(-6, Math.min(6, desired));
+        previousAngle += (bounded - previousAngle) * .13;
+        const scale = .45 * width / carWidth;
+        const bounce = Math.sin(elapsed / 350 * Math.PI * 2) * 1.5;
+        car.setAttribute('transform', `translate(${x.toFixed(2)} ${(y + bounce).toFixed(2)}) rotate(${previousAngle.toFixed(2)})`);
+        carScale.setAttribute('transform', `scale(${scale.toFixed(4)})`);
+        requestAnimationFrame(animateCar);
+      };
+      requestAnimationFrame(animateCar);
+    })();
+  ]]></script>
+</svg>

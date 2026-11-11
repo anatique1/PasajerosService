@@ -1,0 +1,243 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 490" width="100%" role="img" aria-label="Un convertible rojo sube una carretera entre colinas">
+  <defs>
+    <linearGradient id="cielo-gradiente" x1="0" y1="0" x2="0" y2="490" gradientUnits="userSpaceOnUse"><stop stop-color="#83bec5"/><stop offset=".67" stop-color="#c4e1d9"/><stop offset="1" stop-color="#f7e9c9"/></linearGradient>
+    <radialGradient id="halo-sol"><stop stop-color="#fff4c5" stop-opacity=".88"/><stop offset="1" stop-color="#fff4c5" stop-opacity="0"/></radialGradient>
+    <radialGradient id="sol-gradiente"><stop stop-color="#ffedb0"/><stop offset="1" stop-color="#f5c967"/></radialGradient>
+    <path id="ruta" d="M418 530 C418 468 392 438 394 396 C396 362 428 346 424 306 C420 278 402 256 400 198" fill="none" stroke="none"/>
+    <g id="arbol-redondo">
+      <ellipse cx="0" cy="0" rx="20" ry="5" fill="#455642" opacity=".22"/>
+      <path d="M0-5V-31" stroke="#79543c" stroke-width="5" stroke-linecap="round"/>
+      <g style="transform-box:fill-box;transform-origin:50% 100%">
+        <animateTransform attributeName="transform" type="rotate" values="-1.5;1.5;-1.5" dur="6s" repeatCount="indefinite"/>
+        <circle cx="-12" cy="-32" r="12" fill="#e58a30"/><circle cx="2" cy="-40" r="14" fill="#f0bd3e"/><circle cx="14" cy="-29" r="12" fill="#df702a"/><circle cx="-1" cy="-24" r="11" fill="#eab33d"/>
+      </g>
+    </g>
+    <g id="arbol-pino">
+      <ellipse cx="0" cy="0" rx="13" ry="4" fill="#455642" opacity=".2"/>
+      <path d="M0-4V-43" stroke="#79543c" stroke-width="4"/>
+      <g style="transform-box:fill-box;transform-origin:50% 100%">
+        <animateTransform attributeName="transform" type="rotate" values="1.5;-1.5;1.5" dur="6s" repeatCount="indefinite"/>
+        <path d="M0-50L-15-26H-7L-19-10H19L7-26H15Z" fill="#57785b"/><path d="M0-50L0-10H19L7-26H15Z" fill="#405f4c"/>
+      </g>
+    </g>
+    <g id="flor">
+      <path d="M0 0V-9" stroke="#52764c" stroke-width="1.5" stroke-linecap="round"/><circle cy="-11" r="2.4" fill="#fff3cf"/><circle cy="-11" r="1.1" fill="#efbd3c"/>
+    </g>
+    <g id="mata"><path d="M0 0Q-5-7-2-12Q2-7 1 0Q3-9 8-11Q8-4 3 1Q8-5 12-5Q10 0 3 3Z" fill="#557447"/></g>
+    <clipPath id="clip-colina"><path d="M0 320Q97 336 205 307Q298 279 359 235Q389 213 400 208Q419 204 439 222Q503 273 603 307Q696 337 800 315V490H0Z"/></clipPath>
+  </defs>
+  <style>
+    .nube-izq{animation:nube-izq 12s ease-in-out infinite alternate}
+    .nube-der{animation:nube-der 12s ease-in-out infinite alternate}
+    .colinas-lejos{animation:parallax-lejos 12s ease-in-out infinite alternate}
+    .colinas-medias{animation:parallax-medias 6s ease-in-out infinite alternate}
+    .polvo-a{animation:polvo-a 2s ease-out infinite}
+    .polvo-b{animation:polvo-b 2s ease-out infinite}
+    .rueda{transform-box:fill-box;transform-origin:center;animation:rodar 2s linear infinite}
+    .humo{animation:humo 3s ease-out infinite}
+    @keyframes nube-izq{from{transform:translateX(-8px)}to{transform:translateX(12px)}}
+    @keyframes nube-der{from{transform:translateX(10px)}to{transform:translateX(-9px)}}
+    @keyframes parallax-lejos{from{transform:translateX(-2px)}to{transform:translateX(3px)}}
+    @keyframes parallax-medias{from{transform:translateX(2px)}to{transform:translateX(-3px)}}
+    @keyframes polvo-a{0%{opacity:0;r:2}35%{opacity:.42}100%{opacity:0;r:8}}
+    @keyframes polvo-b{0%{opacity:0;r:1}40%{opacity:.32}100%{opacity:0;r:6}}
+    @keyframes rodar{to{transform:rotate(360deg)}}
+    @keyframes humo{0%{opacity:0;transform:translateY(3px)}35%{opacity:.45}100%{opacity:0;transform:translateY(-10px)}}
+  </style>
+
+  <g id="cielo"><rect width="800" height="490" fill="url(#cielo-gradiente)"/><path d="M0 0H800V36Q702 53 612 30T411 35Q280 61 155 35T0 42Z" fill="#d3eae2" opacity=".48"/></g>
+  <g id="sol-y-halo"><circle cx="589" cy="105" r="84" fill="url(#halo-sol)"/><circle cx="589" cy="105" r="33" fill="url(#sol-gradiente)"/></g>
+  <g id="nubes" fill="#f8f8ed" opacity=".88">
+    <g class="nube-izq"><path d="M94 127q2-12 16-12q7-17 25-15q16 2 18 18q15-4 20 9q2 9-9 10h-59q-14-1-11-10Z"/></g>
+    <g class="nube-der"><path d="M534 145q2-10 13-10q6-14 20-12q14 2 16 14q13-3 17 8q1 8-8 8h-49q-12-1-9-8Z"/></g>
+    <path d="M278 105q2-7 10-7q4-10 14-9q9 1 11 10q9-2 11 6q1 5-6 5h-33q-8-1-7-5Z" opacity=".65"/>
+  </g>
+  <g id="colinas-lejanas" class="colinas-lejos">
+    <path d="M-12 291V210Q28 193 49 224Q72 203 94 246Q119 218 145 261Q171 239 196 284L225 312H-12Z" fill="#75999a"/>
+    <path d="M812 211Q772 196 748 229Q725 210 703 251Q677 231 651 274Q628 252 601 299L572 320H812Z" fill="#749499"/>
+    <path d="M-12 302L0 302Q76 254 154 280T298 286Q371 238 443 279T581 277Q691 231 800 281L812 281V391H-12Z" fill="#899a70"/>
+    <path d="M0 315Q78 276 153 296T296 301Q373 257 443 296T581 295Q689 252 800 300" fill="none" stroke="#9dab79" stroke-width="12" opacity=".55"/>
+  </g>
+  <g id="colinas-medias" class="colinas-medias">
+    <path d="M-12 328L0 328Q105 291 211 319T395 314Q499 278 605 309T800 298L812 298V490H-12Z" fill="#a3ad6b"/>
+    <path d="M0 351Q105 317 212 339T397 335Q505 301 608 332T800 321" fill="none" stroke="#c4bd70" stroke-width="14" opacity=".48"/>
+    <path d="M-12 377L0 377Q110 353 217 374T411 368Q520 337 627 365T800 354L812 354V490H-12Z" fill="#bac078"/>
+  </g>
+  <g id="casas-y-arboles-lejanos">
+    <g opacity=".58"><use xlink:href="#arbol-pino" transform="translate(38 324) scale(.55)"/><use xlink:href="#arbol-pino" transform="translate(740 321) scale(.5)"/></g>
+    <g transform="translate(76 302)"><ellipse cx="28" cy="3" rx="36" ry="6" fill="#4f5842" opacity=".2"/><path d="M0 0V-38L28-59L58-38V0Z" fill="#f0cc71"/><path d="M-6-37L28-64L64-37L58-32L28-53L0-31Z" fill="#d64737"/><rect x="8" y="-28" width="11" height="12" fill="#9bc4c1"/><rect x="37" y="-28" width="11" height="12" fill="#9bc4c1"/><path d="M24 0V-23Q29-28 34-23V0" fill="#986349"/><path d="M44-45V-58H51V-34" fill="#e2bc6d"/><g class="humo" fill="#f9f5e8"><circle cx="49" cy="-64" r="3"/><circle cx="53" cy="-70" r="2.5"/></g></g>
+    <g transform="translate(682 314) scale(.78)"><ellipse cx="28" cy="3" rx="36" ry="6" fill="#4f5842" opacity=".2"/><path d="M0 0V-38L28-59L58-38V0Z" fill="#f0cc71"/><path d="M-6-37L28-64L64-37L58-32L28-53L0-31Z" fill="#d64737"/><rect x="8" y="-28" width="11" height="12" fill="#9bc4c1"/><rect x="37" y="-28" width="11" height="12" fill="#9bc4c1"/><path d="M24 0V-23Q29-28 34-23V0" fill="#986349"/></g>
+    <use xlink:href="#arbol-redondo" transform="translate(32 333) scale(.55)"/>
+    <use xlink:href="#arbol-redondo" transform="translate(756 336) scale(.58)"/>
+    <use xlink:href="#arbol-pino" transform="translate(223 341) scale(.68)"/>
+    <use xlink:href="#arbol-pino" transform="translate(572 340) scale(.7)"/>
+  </g>
+  <g id="colina-primer-plano">
+    <path d="M0 320Q97 336 205 307Q298 279 359 235Q389 213 400 208Q419 204 439 222Q503 273 603 307Q696 337 800 315V490H0Z" fill="#889966"/>
+    <path d="M400 208Q419 204 439 222Q503 273 603 307Q696 337 800 315V350Q700 338 600 330Q470 296 400 208Z" fill="#9aa872" opacity=".5"/>
+    <path d="M0 320Q97 336 205 307Q298 279 359 235Q389 213 400 208Q382 252 300 292Q150 345 0 354Z" fill="#6f804d" opacity=".32"/>
+    <path d="M0 321Q98 337 205 309Q300 281 360 237Q390 215 400 210" fill="none" stroke="#9eaa75" stroke-width="5" opacity=".7"/>
+  </g>
+  <g id="arboles-y-pasto-frontal">
+    <use xlink:href="#arbol-pino" transform="translate(43 351)"/><use xlink:href="#arbol-pino" transform="translate(89 360) scale(.82)"/><use xlink:href="#arbol-redondo" transform="translate(153 357)"/><use xlink:href="#arbol-redondo" transform="translate(219 362) scale(.82)"/>
+    <use xlink:href="#arbol-redondo" transform="translate(601 355) scale(.86)"/><use xlink:href="#arbol-pino" transform="translate(686 357)"/><use xlink:href="#arbol-pino" transform="translate(752 350) scale(.78)"/>
+    <use xlink:href="#mata" x="18" y="442"/><use xlink:href="#mata" x="58" y="468"/><use xlink:href="#mata" x="119" y="423"/><use xlink:href="#mata" x="183" y="464"/><use xlink:href="#mata" x="250" y="439"/><use xlink:href="#mata" x="552" y="459"/><use xlink:href="#mata" x="636" y="425"/><use xlink:href="#mata" x="704" y="471"/><use xlink:href="#mata" x="778" y="438"/>
+    <use xlink:href="#flor" x="35" y="465"/><use xlink:href="#flor" x="83" y="430"/><use xlink:href="#flor" x="143" y="478"/><use xlink:href="#flor" x="208" y="434"/><use xlink:href="#flor" x="274" y="473"/><use xlink:href="#flor" x="526" y="429"/><use xlink:href="#flor" x="590" y="475"/><use xlink:href="#flor" x="663" y="450"/><use xlink:href="#flor" x="735" y="430"/>
+  </g>
+
+  <g id="carretera" clip-path="url(#clip-colina)">
+    <polygon id="sombra-camino" fill="#5f6f45" opacity=".28"/>
+    <polygon id="orilla" fill="#f3e9d0"/>
+    <polygon id="asfalto" fill="#686e63"/>
+    <g id="rayas" stroke="#f5efd9" stroke-linecap="butt"></g>
+  </g>
+  <g id="polvo"></g>
+  <g id="carro" opacity="0">
+    <ellipse cx="0" cy="1" rx="36" ry="5.5" fill="#1f2a1f" opacity=".32"/>
+    <rect x="-33" y="-15" width="9" height="15" rx="3" fill="#232d26"/>
+    <rect x="24" y="-15" width="9" height="15" rx="3" fill="#232d26"/>
+    <path d="M-23-40L-19-50H19L23-40Z" fill="#cfe3e6" stroke="#2d3b2d" stroke-width="1.2" stroke-linejoin="round"/>
+    <path d="M-22-30L-20-42H20L22-30Z" fill="#5a1d14"/>
+    <rect x="-16" y="-40" width="13" height="12" rx="5" fill="#4f8fa3"/>
+    <rect x="3" y="-40" width="13" height="12" rx="5" fill="#f3d792"/>
+    <circle cx="-9.5" cy="-44" r="5.6" fill="#e8c29b"/>
+    <path d="M-15.4-45C-15-52-4-52-3.6-45C-7-47.5-12-47.5-15.4-45Z" fill="#4a3426"/>
+    <circle cx="9.5" cy="-44" r="5.6" fill="#e8c29b"/>
+    <path d="M3.6-45C4-52 15-52 15.4-45C12-47.5 7-47.5 3.6-45Z" fill="#8a5630"/>
+    <path d="M-30-8V-20C-30-24-27-26-23-26H23C27-26 30-24 30-20V-8Z" fill="#d6402f"/>
+    <path d="M-27-26C-27-29.5-24-31-20-31H20C24-31 27-29.5 27-26Z" fill="#e5604c"/>
+    <path d="M-22-28H22" stroke="#f3a595" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M-30-12H30V-8H-30Z" fill="#a8281c"/>
+    <rect x="-28" y="-23" width="11" height="6" rx="2.5" fill="#ff8a72" stroke="#7a1f16"/>
+    <rect x="17" y="-23" width="11" height="6" rx="2.5" fill="#ff8a72" stroke="#7a1f16"/>
+    <rect x="-6" y="-21" width="12" height="6" rx="1" fill="#f1e6d8"/>
+    <rect x="-27" y="-8" width="54" height="4.5" rx="2.2" fill="#cfd4c8"/>
+    <circle cx="-17" cy="-3" r="1.8" fill="#2d3b2d"/><circle cx="17" cy="-3" r="1.8" fill="#2d3b2d"/>
+  </g>
+  <g id="pasto-extra"></g>
+  <script><![CDATA[
+(function () {
+  var NS = "http://www.w3.org/2000/svg";
+  var ruta = document.getElementById("ruta");
+  var L = ruta.getTotalLength();
+  var HORIZONTE = 207;
+
+  function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
+  function pt(f) { return ruta.getPointAtLength(clamp(f, 0, 1) * L); }
+  function tan(f) {
+    var a = pt(f - 0.004), b = pt(f + 0.004);
+    var dx = b.x - a.x, dy = b.y - a.y, m = Math.hypot(dx, dy) || 1;
+    return { x: dx / m, y: dy / m };
+  }
+  // el camino siempre sube en pantalla: y -> f por bisección
+  function fDeY(y) {
+    var lo = 0, hi = 1;
+    for (var i = 0; i < 30; i++) {
+      var mid = (lo + hi) / 2;
+      if (pt(mid).y > y) lo = mid; else hi = mid;
+    }
+    return (lo + hi) / 2;
+  }
+  // ancho con perspectiva: proporcional a la distancia bajo el horizonte
+  function ancho(y) { return Math.max(3, 0.34 * (y - HORIZONTE) + 4); }
+
+  function poligono(extra) {
+    var N = 220, izq = [], der = [];
+    for (var i = 0; i <= N; i++) {
+      var f = i / N, p = pt(f), t = tan(f), h = ancho(p.y) / 2 + extra(ancho(p.y));
+      izq.push((p.x - t.y * h).toFixed(1) + "," + (p.y + t.x * h).toFixed(1));
+      der.push((p.x + t.y * h).toFixed(1) + "," + (p.y - t.x * h).toFixed(1));
+    }
+    return izq.concat(der.reverse()).join(" ");
+  }
+  document.getElementById("sombra-camino").setAttribute("points", poligono(function (w) { return 4 + w * 0.06; }));
+  document.getElementById("orilla").setAttribute("points", poligono(function (w) { return 1 + w * 0.035; }));
+  document.getElementById("asfalto").setAttribute("points", poligono(function () { return 0; }));
+
+  // rayas centrales con perspectiva real
+  var rayas = document.getElementById("rayas");
+  for (var i = 0; i < 160; i++) {
+    var ha = 300 / (1 + 0.5 * i), hb = 300 / (1 + 0.5 * (i + 0.45));
+    if (ha < 3) break;
+    var pa = pt(fDeY(HORIZONTE + ha)), pb = pt(fDeY(HORIZONTE + hb));
+    var ln = document.createElementNS(NS, "line");
+    ln.setAttribute("x1", pa.x.toFixed(1)); ln.setAttribute("y1", pa.y.toFixed(1));
+    ln.setAttribute("x2", pb.x.toFixed(1)); ln.setAttribute("y2", pb.y.toFixed(1));
+    ln.setAttribute("stroke-width", (ancho(pa.y) * 0.045 + 0.5).toFixed(2));
+    rayas.appendChild(ln);
+  }
+
+  // flores y matas extra, evitando la carretera
+  var extra = document.getElementById("pasto-extra");
+  var sem = 11;
+  function rnd() { sem = (sem * 16807) % 2147483647; return sem / 2147483647; }
+  function libre(x, y) {
+    if (y < 200 || y > 530) return true;
+    return Math.abs(x - pt(fDeY(y)).x) > ancho(y) / 2 + 16;
+  }
+  var puestos = 0, intentos = 0;
+  while (puestos < 55 && intentos < 600) {
+    intentos++;
+    var x = 14 + rnd() * 772, y = 352 + rnd() * 130;
+    if (!libre(x, y)) continue;
+    var esc = 0.7 + (y - 352) / 130 * 0.7;
+    var g = document.createElementNS(NS, "g");
+    g.setAttribute("transform", "translate(" + x.toFixed(1) + " " + y.toFixed(1) + ") scale(" + esc.toFixed(2) + ")");
+    if (rnd() < 0.55) {
+      var alto = 7 + rnd() * 5;
+      g.innerHTML = '<path d="M0 0V' + (-alto).toFixed(1) + '" stroke="#5f7a3f" stroke-width="1" fill="none"/>' +
+        '<circle cx="0" cy="' + (-alto - 1).toFixed(1) + '" r="1.9" fill="' + (rnd() < 0.5 ? "#f6eab0" : "#fbf8ee") + '"/>';
+    } else {
+      g.innerHTML = '<path d="M0 0L-4-8M0 0L0-10M0 0L4-8" stroke="#4d6b3e" stroke-width="1.5" fill="none" stroke-linecap="round"/>';
+    }
+    extra.appendChild(g);
+    puestos++;
+  }
+
+  // carro y polvo
+  var carro = document.getElementById("carro");
+  var polvo = document.getElementById("polvo");
+  var nubes = [];
+  for (var k = 0; k < 9; k++) {
+    var c = document.createElementNS(NS, "circle");
+    c.setAttribute("fill", "#eee3c9"); c.setAttribute("opacity", "0"); c.setAttribute("r", "1");
+    polvo.appendChild(c);
+    nubes.push({ el: c, nace: -1, x: 0, y: 0, s: 1 });
+  }
+  var siguiente = 0, ultimo = 0, inicio = null, DUR = 13000;
+
+  function cuadro(now) {
+    if (inicio === null) inicio = now;
+    var t = now - inicio, v = ((t % DUR) / DUR) / 0.93;
+    if (v > 1) {
+      carro.setAttribute("opacity", "0");
+    } else {
+      var f = fDeY(HORIZONTE + 8 + 322 * Math.pow(1 - v, 1.8));
+      var p = pt(f), tg = tan(f), w = ancho(p.y);
+      var x = p.x - tg.y * w * 0.24, y = p.y + tg.x * w * 0.24;   // carril derecho
+      var s = (0.5 * w) / 66;
+      var lean = clamp(Math.atan2(tg.x, -tg.y) * 180 / Math.PI * 0.18, -6, 6);
+      var rebote = -Math.abs(Math.sin(t * 0.012)) * 0.9 * s;
+      var op = v < 0.03 ? v / 0.03 : (v > 0.94 ? Math.max(0, (1 - v) / 0.06) : 1);
+      carro.setAttribute("transform", "translate(" + x.toFixed(1) + " " + (y + rebote).toFixed(1) + ") rotate(" + lean.toFixed(1) + ") scale(" + s.toFixed(3) + ")");
+      carro.setAttribute("opacity", op.toFixed(2));
+      if (t - ultimo > 170 && v > 0.04 && v < 0.9) {
+        ultimo = t;
+        var n = nubes[siguiente++ % nubes.length];
+        n.nace = t; n.x = x + (Math.random() - 0.5) * 12 * s; n.y = y + 2 * s; n.s = s;
+      }
+    }
+    for (var j = 0; j < nubes.length; j++) {
+      var q = nubes[j], e = (t - q.nace) / 1400;
+      if (q.nace < 0 || e > 1 || v > 1) { q.el.setAttribute("opacity", "0"); continue; }
+      q.el.setAttribute("cx", q.x.toFixed(1));
+      q.el.setAttribute("cy", (q.y + e * 5 * q.s).toFixed(1));
+      q.el.setAttribute("r", ((3 + e * 9) * q.s).toFixed(2));
+      q.el.setAttribute("opacity", ((1 - e) * 0.5).toFixed(2));
+    }
+    requestAnimationFrame(cuadro);
+  }
+  requestAnimationFrame(cuadro);
+})();
+]]></script>
+</svg>
