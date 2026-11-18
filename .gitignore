@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Local configuration (Google OAuth and MongoDB credentials)
+.env
+.env.*
+!frontend/.env.example
