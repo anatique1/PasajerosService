@@ -1,5 +1,6 @@
 package com.example.pasajero.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -15,8 +16,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "pasajeros")
 public class Pasajero extends Persona {
 
+    @Schema(description = "Formato AAAA-MM-DD", example = "2026-11-18")
     private String fechaRegistro;
 
+    /** El id es opcional: si no llega, MongoDB lo genera al guardar. */
     public boolean validarPasajero() {
         return getNombre() != null && !getNombre().isBlank() &&
                 getApellido() != null && !getApellido().isBlank() &&
@@ -24,7 +27,6 @@ public class Pasajero extends Persona {
                 getTipoDocumento() != null && !getTipoDocumento().isBlank() &&
                 getTelefono() != null && !getTelefono().isBlank() &&
                 getCorreo() != null && !getCorreo().isBlank() &&
-                getId() != null && !getId().isBlank() &&
                 getFechaRegistro() != null && !getFechaRegistro().isBlank();
     }
 }

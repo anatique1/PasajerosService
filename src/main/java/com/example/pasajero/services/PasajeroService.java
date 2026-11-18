@@ -14,12 +14,17 @@ public class PasajeroService {
     private final PasajeroRepository repository;
 
     public Pasajero crearPasajero(Pasajero pasajero) {
-        if (!pasajero.validarPasajero()) {
+        if (pasajero == null || !pasajero.validarPasajero()) {
             throw new RuntimeException("Los datos del pasajero están incompletos.");
         }
-        if (repository.existsById(pasajero.getId())) {
+
+        // El id es opcional: si no se envía, MongoDB lo genera.
+        if (pasajero.getId() == null || pasajero.getId().isBlank()) {
+            pasajero.setId(null);
+        } else if (repository.existsById(pasajero.getId())) {
             throw new RuntimeException("Ya existe un pasajero con el ID " + pasajero.getId());
         }
+
         return repository.save(pasajero);
     }
 
@@ -32,7 +37,7 @@ public class PasajeroService {
     }
 
     public Pasajero modificarPasajero(Pasajero pasajero) {
-        if (!repository.existsById(pasajero.getId())) {
+        if (pasajero.getId() == null || !repository.existsById(pasajero.getId())) {
             throw new RuntimeException("No se encontró un pasajero con el ID " + pasajero.getId());
         }
         if (!pasajero.validarPasajero()) {
