@@ -21,6 +21,7 @@ public class CuentaGoogle {
     private String nombre;
     private String fotoUrl;
     private String rol = "PASAJERO";
+    private String pasajeroId;
     private Instant creadoEn;
     private Instant ultimoAcceso;
 }
